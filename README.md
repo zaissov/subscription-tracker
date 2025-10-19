@@ -94,35 +94,76 @@ Key integrations:
 
 ---
 
+
+
 ## ⚡ Project Structure
 
-subscription-tracker/
-│
-├── app.js                     # Main server entry point
-├── config/
-│   └── env.js                 # Environment configuration
-├── controllers/
-│   ├── auth.controller.js
-│   ├── subscription.controller.js
-│   ├── user.controller.js
-│   └── workflow.controller.js
-├── database/
-│   └── mongodb.js             # Database connection
-├── middlewares/
-│   ├── arcjet.middlewares.js
-│   └── error.middlewares.js
-├── models/
-│   ├── user.model.js
-│   └── subscription.model.js
-├── routes/
-│   ├── auth.routes.js
-│   ├── subscription.routes.js
-│   ├── user.routes.js
-│   └── workflow.routes.js
-└── utils/
-└── send-email.js          # Email utility using Nodemailer
+<div align="left">
 
----
+
+📦 subscription-tracker/
+│
+├── 🧠 app.js  
+│   └─ Main server entry point – initializes Express app and routes.
+│
+├── ⚙️ config/
+│   └─ env.js — Environment configuration (PORT, DB, JWT, etc.)
+│
+├── 🎮 controllers/
+│   ├─ auth.controller.js — Handles signup, login, logout, and JWT tokens.
+│   ├─ subscription.controller.js — CRUD logic for subscriptions.
+│   ├─ user.controller.js — User profile and data management.
+│   └─ workflow.controller.js — Automates reminders and Upstash workflows.
+│
+├── 🗄️ database/
+│   └─ mongodb.js — MongoDB connection via Mongoose.
+│
+├── 🧩 middlewares/
+│   ├─ arcjet.middlewares.js — Rate limiting & bot protection (Arcjet).
+│   └─ error.middlewares.js — Centralized error handler.
+│
+├── 🧬 models/
+│   ├─ user.model.js — Defines user schema & authentication logic.
+│   └─ subscription.model.js — Defines subscription schema (price, frequency, etc.)
+│
+├── 🌐 routes/
+│   ├─ auth.routes.js — Auth endpoints (register, login, logout).
+│   ├─ subscription.routes.js — Subscription management endpoints.
+│   ├─ user.routes.js — User management routes.
+│   └─ workflow.routes.js — Workflow and reminder routes.
+│
+└── 🛠️ utils/
+    └─ send-email.js — Email utility using Nodemailer.
+
+</div>
+
+
+
+⸻
+
+💡 Visual Overview
+
+Folder	Purpose	Icon
+app.js	Main server entry point	🧠
+config/	Environment configuration (e.g. .env, constants)	⚙️
+controllers/	Core business logic and CRUD operations	🎮
+database/	MongoDB connection setup	🗄️
+middlewares/	Request validation, rate limiting, and error handling	🧩
+models/	Mongoose schemas for data structure	🧬
+routes/	API route definitions	🌐
+utils/	Helper utilities (e.g., email sender)	🛠️
+
+
+⸻
+
+✨ Tips for Readability
+	•	Use monospace blocks (```) to preserve structure.
+	•	Emojis improve quick scanning for developers on GitHub.
+	•	The table reinforces clarity and readability for new contributors.
+
+⸻
+
+
 
 ## 🚀 Quick Start
 
@@ -202,7 +243,7 @@ POST /api/v1/auth/sign-up
 {
   "name": "Zaissov Mendes",
   "email": "zaissov@icloud.com",
-  "password": "zaissov1994"
+  "password": "zaissov"
 }
 
 
@@ -284,7 +325,7 @@ Contributions, issues, and feature requests are always welcome!
 Feel free to open a pull request or start a discussion.
 
 # Fork the project
-git fork https://github.com/yourusername/subscription-tracker.git
+git fork https://github.com/zaissov/subscription-tracker.git
 
 # Create a new branch
 git checkout -b feature/your-feature
@@ -302,23 +343,15 @@ git push origin feature/your-feature
 
 Zaissov Mendes
 💼 GitHub
-📧 Email
+📧 zaissov@yahoo.com
 
-⸻
-
-📄 License
-
-This project is licensed under the MIT License.
-See the LICENSE file for more details.
 
 ⸻
 
 
-<div align="center">
-  <p>Made with ❤️ by <strong>Zaissov Mendes</strong></p>
-  <img src="https://img.shields.io/badge/Contributions-Welcome-success?style=flat-square" />
-  <img src="https://img.shields.io/badge/Built%20With-Love-orange?style=flat-square" />
-</div>
-```
+
+
+
+
 
 
